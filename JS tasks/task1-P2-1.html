@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>The Output is= </p>
+    <p id="output"></p>  
+    <script>
+let number1= parseFloat(prompt("Please inter First name"));
+let op=prompt("Please Enter the Opration");
+let number2=parseFloat(prompt("Please inter Secound name"));
+let result;
+switch(op) {
+  case "+":
+ result=number1+number2;
+    break;
+  case "-":
+  result=number1-number2;
+    break;
+    case "*":
+  result=number1*number2;
+    break;
+    case "/":
+  result=number1/number2;
+    break;
+  default:
+  result=number1+number2;   
+}
+document.getElementById("output").innerHTML=result;
+
+
+
+    </script>
+</body>
+</html>

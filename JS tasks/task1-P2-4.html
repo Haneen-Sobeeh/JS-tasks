@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        body{
+            background-color: rgb(189, 129, 245);
+            text-align: center;
+        }
+        h3{
+            margin-top: 10%;
+            color: white;
+        }
+        p{
+            margin-top: 5%;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<h3>How are you </h3>
+<p id="output"></p>
+
+<script>
+let x=parseInt(prompt("Enter X value"));
+let y=parseInt(prompt("Enter Y value"));
+
+if(x>y){
+    console.log("Hello World");
+  document.getElementById("output").innerHTML="Hello World";  
+}
+else{
+    console.log("Goodbye");  
+    document.getElementById("output").innerHTML="Goodbye"; 
+     
+}
+
+</script>
+</body>
+</html>

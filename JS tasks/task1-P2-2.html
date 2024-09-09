@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = 77;
+        var result;
+
+        if (x < 50) {
+            result = "FAIL";
+        } else if (x >= 50 && x < 60) {
+            result = "D";
+        } else if (x >= 60 && x < 70) {
+            result = "C";
+        } else if (x >= 70 && x < 80) {
+            result = "B";
+        } else if (x >= 80 && x < 90) {
+            result = "A";
+        } else if (x >= 90 && x <= 100) {
+            result = "A+";
+        } else {
+            result = "Invalid mark"; 
+        }
+
+        document.write("Your Grade is " + result);
+    </script>
+
+
+
+
+    </script>
+</body>
+</html>
