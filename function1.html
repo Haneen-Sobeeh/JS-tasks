@@ -364,18 +364,20 @@
 
 <script>
     document.write("Function 24: <br>");
-    function resetCounter(x){
-        let count=x;
-        x=0;
-        return count;
-    }
-    document.write("Counter: " + counter(3) + "<br>"); 
+     let count=0;
+    function resetCounter() {
+        let prv = count;
+        count = 0;
+        return `${prv} and the counter reset now`;
+      }
+         
             
-            document.write("ResetCounter: " + resetCounter(3) + "<br>"); 
+            document.write("ResetCounter: " + resetCounter() + "<br>"); 
             
             
     document.write("<br><br>");  
 </script>
+
 
 
 </body>
