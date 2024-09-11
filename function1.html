@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("Function 1: <br>");
+        function tellFortune(X,Y,Z,N){
+        document.write("You will be a "+  X + " in "+  Y+ ", and married to "+ Z+  " with "+ N + " kids.");
+
+        }
+        tellFortune('software engineer', 'Jordan', 'Men', 3);
+        document.write("<br><br>");
+    </script>
+    <script>
+          document.write("Function 2: <br>");
+        function calculateDogAge(age){
+            return age*7;
+
+        }
+        let age=calculateDogAge(2)
+        document.write("Your doggie is "+ age + " years old in dog years!")
+          document.write("<br><br>");
+    </script>
+
+
+    <script>
+         document.write("Function 3: <br>");
+        function calculateSupply(age,m)
+        {
+            return (100-age)*365*m;
+
+        }
+        let amount=calculateSupply(22,2)
+        document.write("You will need "+ amount +" cups of tea to last you until the ripe old age of 100");
+         document.write("<br><br>");
+
+    </script>
+    
+    <script>
+         document.write("Function 4: <br>");
+        function greet(name){
+            document.write("hello "+ name);
+        }
+        greet("Haneen")
+         document.write("<br><br>");
+    </script>
+
+    <script>
+        document.write("Function 5: <br>");
+        document.write("1)  name of paremeter in function not same  cat != x <br>");
+        document.write("2)  Incorrect paremeter use <br> ")
+        document.write("3)  Incorrect paremeter use  ")
+
+        document.write("<br><br>");
+    </script>
+
+    <script>
+         document.write("Function 6: <br>");
+         document.write("check code")
+
+         function double1(x ){
+             return 2 * x ;
+             }
+
+        function double2 (x){
+         return 2 * x;
+            }
+
+        function double3 (x) {
+            return 2 * x;}
+         document.write("<br><br>");
+    </script>
+
+    <script>
+         document.write("Function 7: <br>");
+         function cube(num){
+              return  num*num*num;
+          
+         }
+        
+         let number=cube(4);
+         document.write("The cube of 4 is "+number);
+         document.write("<br><br>");
+          
+    </script>
+
+    <script>
+         document.write("Function 8: <br>");
+         function multiply (i,x) {
+            return i*x;
+         }
+
+    document.write("multiply Output: "+multiply(5,4)+"<br>" );   
+    document.write("multiply Output: "+multiply(2,8)+"<br>" );   
+  
+
+        document.write("<br><br>");  
+    </script>
+    
+    <script>
+        document.write("Function 9: <br>");
+        function canIGetADrivingLicense(age){
+            if(age>20){
+                document.write("YES YOU CAN")
+            }
+            else{
+                document.write("please come back after " +(20-age) +" years to get one")
+            }
+        }
+        canIGetADrivingLicense(15)
+        document.write("<br><br>");  
+
+    </script>
+    <script>
+         document.write("Function 10: <br>");
+         function countCharacters(str) {
+        let count = 0;
+    
+        for (let i in str) {
+        count++; }
+        return count;
+    }
+
+        function sameLength(f1,f2){
+        
+            if(countCharacters(f1)===countCharacters(f2)){
+             return true   
+            }
+            else{
+               return  false
+            }
+        }
+        document.write("Are 'tree' and 'clue' the same length? " + sameLength("tree", "clue") + "<br>");
+        document.write("Are 'tree' and 'car' the same length? " + sameLength("tree", "car") + "<br>");
+         document.write("<br><br>");  
+    </script>
+
+    <script>
+         document.write("Function 11: <br>");
+         function largerNubmer(x,y){
+            if(x>y){
+                return x;
+            }
+            else {
+                return y;
+            }
+         }
+
+         document.write("large number between 3,6 is " +largerNubmer(3,6)+"<br>")
+         document.write("large number between 7,2 is " +largerNubmer(7,2)+"<br>")
+         document.write("<br><br>");  
+    </script>
+
+<script>
+    document.write("Function 12: <br>");
+    function smallerNubmer(x,y,z){
+        let num=x;
+        if(num>y){
+            num=y
+        }
+        if(num>z){
+            num=z;
+        }
+        return num;
+
+    }
+
+    document.write("smaller number between 3,6,5 is " +smallerNubmer(3,6,5)+"<br>")
+    document.write("smaller number between 7,2,11 is " +smallerNubmer(7,2,11)+"<br>")
+    document.write("<br><br>");  
+</script>
+
+<script>
+    document.write("Function 13: <br>");
+
+    function countCharacters(str) {
+        let count = 0;
+    
+        for (let i in str) {
+        count++; }
+        return count;
+    }
+
+        function shorterString(f1,f2,f3,f4,f5){
+        let short=f1;
+        if(countCharacters(short)>countCharacters(f2)){
+            short=f2;
+        }
+        if(countCharacters(short)>countCharacters(f3)){
+            short=f3;
+        }
+        if(countCharacters(short)>countCharacters(f4)){
+            short=f4;
+        }
+        if(countCharacters(short)>countCharacters(f5)){
+            short=f5;
+        }
+          return short;
+        }
+        document.write("the shortter string is "  +shorterString("air","tr","by","car","github")+"<br>");
+        document.write("the shortter string is "  +shorterString("air","by","car","school","github"));
+    document.write("<br><br>");  
+</script>
+
+<script>
+    document.write("Function 14: <br>");
+    function countCharacters(str) {
+        let count = 0;
+    
+        for (let i in str) {
+        count++; }
+        return count;
+    }
+
+        function longerString(f1,f2,f3,f4,f5){
+        let long=f1;
+        if(countCharacters(long)<countCharacters(f2)){
+            long=f2;
+        }
+        if(countCharacters(long)<countCharacters(f3)){
+            long=f3;
+        }
+        if(countCharacters(long)<countCharacters(f4)){
+            long=f4;
+        }
+        if(countCharacters(long)<countCharacters(f5)){
+            long=f5;
+        }
+          return long;
+        }
+        document.write("the longger string is "  +longerString("air","tr","by","car","github")+"<br>");
+        document.write("the longger string is "  +longerString("air","by","car","school","github"));
+    document.write("<br><br>");  
+</script>
+
+<script>
+    document.write("Function 15: <br>");
+    function isEven(num){
+        if(num%2==0){
+          return "ture"
+        }
+        else{
+            return "false"
+        }
+    }
+    document.write("the 5 is "+isEven(5),"<br>");
+    document.write("the 20 is "+isEven(20),"<br>");
+    document.write("<br><br>");  
+</script>
+
+<script>
+    document.write("Function 16: <br>");
+    function isOdd(num){
+        if(num%2!=0){
+          return "ture"
+        }
+        else{
+            return "flase"
+        }
+    }
+    document.write("the 7 is "+isOdd(7),"<br>");
+    document.write("the 55 is "+isOdd(55),"<br>");
+    document.write("<br><br>");  
+</script>
+
+<script>
+    document.write("Function 17: <br>");
+    function positive(num){
+       if(num>0){
+        return num;
+       }
+       else {
+       
+           return  (num*(-1));
+        }
+       }
+    
+    document.write("the positive of -3 is "+positive(-3),"<br>");
+    document.write("the positive of -11 is "+positive(-11),"<br>");   
+    document.write("<br><br>");  
+</script>
+
+<script>
+    document.write("Function 18: <br>");
+    function fullName(fname,lname){
+       return `${fname} ${lname}`
+    }
+    document.write("Your name is ",fullName("Haneen","Sobuh"))
+    document.write("<br><br>");  
+</script>
+
+<script>
+    document.write("Function 19: <br>");
+    function average(n1,n2,n3,n4,n5){
+        return(n1+n2+n3+n4+n5)/5;
+    }
+    document.write("The avarage of number is ",average(1,2,3,4,5))
+    document.write("<br><br>");  
+</script>
+
+<script>
+    document.write("Function 20: <br>");
+    function randomNumber() {
+            return Math.random();
+        }
+        document.write("Random number between 0 and 1: " + randomNumber() + "<br>");
+    document.write("<br><br>");  
+
+</script>
+
+<script>
+     document.write("Function 21: <br>");
+     function randomBetweenNumbers(min,max){
+     return Math.random()*(max - min) + min;
+     }
+     document.write("Random number between 5 and 10: " + randomBetweenNumbers(5, 10) + "<br>");
+     document.write("Random number between 1 and 100: " + randomBetweenNumbers(1, 100) + "<br>");
+     document.write("<br><br>");  
+</script>
+
+<script>
+    document.write("Function 22: <br>");
+    function scoreInUniversty(x){
+        let result;
+        if (x < 50) {
+            result = "FAIL";
+        } else if (x >= 50 && x < 60) {
+            result = "D";
+        } else if (x >= 60 && x < 70) {
+            result = "C";
+        } else if (x >= 70 && x < 80) {
+            result = "B";
+        } else if (x >= 80 && x < 90) {
+            result = "A";
+        } else if (x >= 90 && x <= 100) {
+            result = "A+";
+        } else {
+            result = "Invalid mark"; 
+        }
+        return result;
+
+    }
+
+    document.write("Your grade is ",scoreInUniversty(90))
+    document.write("<br><br>");  
+</script>
+
+<script>
+    document.write("Function 23: <br>");
+    function counter(x){
+        if (x>0){
+        return x +1;
+    }else{
+        return "Please enter positive number "
+    }
+    }
+    document.write("the counter is " ,counter(22))
+    document.write("<br><br>");  
+</script>
+
+<script>
+    document.write("Function 24: <br>");
+    function resetCounter(x){
+        let count=x;
+        x=0;
+        return count;
+    }
+    document.write("Counter: " + counter(3) + "<br>"); 
+            
+            document.write("ResetCounter: " + resetCounter(3) + "<br>"); 
+            
+            
+    document.write("<br><br>");  
+</script>
+
+
+</body>
+</html>
