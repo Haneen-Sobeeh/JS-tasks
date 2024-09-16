@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//1
+let array1= [ 1,7,  9 , 45, ];
+let array2=["Str" ,"alex","moh"];
+let array3=['the','fox', 'over' ,'lazy', 'dog'  ];
+
+//2
+var fruits = ["Tomato", "Banana", "Watermelon"];
+          console.log(fruits.indexOf("Tomato"));
+          console.log(fruits.indexOf("Banana"));
+
+//3
+
+let food=["banana","apple","shawerma","mansaf","sweet"];
+let Sport =["football","swimming","basketball"];
+let movies=["movie 1","movie 2","movie 3","movie 4"];
+
+//4
+function firstOfArray(arr){
+return (arr[0]);
+}
+console.log( firstOfArray([1,2,3]));
+
+
+ //5
+ function lastOfArray(arr){
+    
+ return (arr[arr.length - 1]);
+}
+console.log( lastOfArray([1,2,3]));
+
+
+//6
+
+let Array1= [0,5,7,9];
+
+Array1.shift();
+Array1.shift();
+Array1.shift();
+Array1.unshift(8);
+Array1.unshift(6);
+Array1.unshift(4);
+Array1.unshift(3);
+Array1.unshift(2);
+Array1.unshift(1);
+Array1.push(10);
+console.log(Array1);
+
+
+//7
+
+let Array2 = [5, 9, -7, 3.5];
+Array2.pop();
+Array2.shift();
+Array2.push(5);
+Array2.shift();
+Array2.unshift(1);
+Array2.unshift(8);
+console.log(Array2);
+
+//8
+
+function middleOfArray(arr){
+    x=arr.length;
+    if(x%2==0){
+        return [arr[(x / 2) - 1], arr[x / 2]];
+    }
+    else{
+        return (arr[(x-1)/2]);
+    }
+    }
+
+    console.log( middleOfArray([1,2,3]));
+    console.log( middleOfArray([1,2,3,4]));
+    console.log( middleOfArray([6,7,9]));
+    console.log( middleOfArray([1,7,11,33]));
+
+
+    //9
+    let animals = ['cat', 'ele', 'bird'];
+    animals[0]='zebra';
+    animals[1]='elephant';
+    console.log(animals)
+
+
+    let nums= [1,2,3,8,9];
+    nums[0]=5;
+    nums[1]=-22;
+    nums[2]=3.5;
+    nums[3]=44;
+    nums[3]=98;
+    nums[5]=44;
+    console.log(nums)
+
+//10
+
+function indexOfArray(arr,index){
+    return (arr[index]);
+
+}
+
+console.log(indexOfArray([2,5,2,11,7],4));
+
+
+//11
+
+function arrayExceptLast(arr) {
+  return arr.slice(0, arr.length-1); 
+}
+
+console.log(arrayExceptLast([11,6,3,2,9]));
+
+//12
+
+function addToEnd(arr,x){
+    arr.push(x);
+    return arr;
+}
+
+let arr = [1, 44, 3, 1, 9];
+ console.log(addToEnd(nums, 0));
+
+ //13
+ 
+ function sumArray_loop(arr){
+    let x=0;
+   for(a of arr){
+        x+=a;
+    }
+   return x;
+ }
+ function sumArray_while(arr){
+    let x = 0;
+    let i = 0;
+while(arr[i]){
+    x += arr[i];
+     i++;
+}
+return x;
+ }
+ console.log(sumArray_loop([11,5,2,7]));
+ console.log(sumArray_while([11,5,2,7]));
+
+
+ //14
+
+ function minInArray_loop(arr){
+   let x=arr[0];
+ for(a of arr){
+   if(a<x){
+    x=a;
+   }
+ 
+ }
+ return x;
+ }
+
+ function minInArray_while(arr){
+    let x=arr[0];
+   let i=1;
+    while(i<arr.length){
+    if(arr[i]<x){
+        x=arr[i];
+    }
+    i++;
+    }
+    return x;
+}
+
+console.log(minInArray_loop([11,5,2,7]));
+ console.log(minInArray_while([11,5,2,7]));
+
+
+ //15
+
+function removeFromArray_loop(arr,x){
+
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]==x)
+            arr.splice(i, 1);
+        }
+        return arr;
+    }
+ 
+
+
+function removeFromArray_while(arr,x){
+  let i=0;
+while(i<arr.length){
+    if(arr[i]==x){
+        arr.splice(i, 1);
+       
+    } 
+        i++;
+    
+ 
+}
+return arr;
+}
+console.log(removeFromArray_loop([11,5,2,7],11));
+console.log(removeFromArray_while([11,5,2,7],7));
+console.log(removeFromArray_while([11,7,22,7],11));
+console.log(removeFromArray_while([11,7,22,7],22));
+
+
+//16
+
+function oddArray_loop(arr){
+    let array=[];
+   for(let i=0;i<arr.length;i++){
+    if(arr[i]%2!=0){
+        array.push(arr[i]);
+    }
+   } 
+   return array;
+}
+
+function oddArray_while(arr){
+    let array=[];
+    let i=0
+    while(i<arr.length){
+        if(arr[i]%2!=0){
+        array.push(arr[i]);
+    }
+    i++;
+    }
+return array;
+}
+console.log(oddArray_loop([11,7,22,7,6,13,77,3]));
+console.log(oddArray_while([11,7,22,7,6,13,77,3]));
+
+
+//17
+
+function aveArray_loop(arr){
+    let sum=0;
+    let l=arr.length;
+    for(a of arr){
+        sum+=a;
+    }
+    return (sum/l);
+}
+
+function aveArray_while(arr){
+    let i=0;
+    let sum=0;
+    let l=arr.length;
+    while(i<l){
+        sum+=arr[i];
+        i++;
+    }
+    return (sum/l);
+}
+console.log(aveArray_loop([11,2,5,2,6]));
+console.log(aveArray_while([11,2,5,2,6]));
+
+
+//18
+function shorterInArray_loop(arr){
+let m=arr[0]
+for (a of arr){
+    if(m.length>a.length){
+        m=a
+    }
+}
+return m;
+}
+
+function shorterInArray_while(arr){
+    let m=arr[0] 
+    i=0;
+    while(i<arr.length){
+        if(m.length>arr[i].length){
+        m=arr[i];
+    } 
+    i++;
+    }  
+    return m; 
+}
+
+console.log(shorterInArray_loop(["banana","apple","shawerma","mansaf","sweet"]));
+console.log(shorterInArray_while(["banana","apple","shawerma","mansaf","sweet","gg"]));
+
+
+//19
+function repeatChar_loop(s,c){
+    let x=0;
+    for(let i=0;i<s.length;i++)
+        if(s[i]==c){
+            x++;
+        }
+        return x;
+}
+
+function repeatChar_while(s,c){
+let x=0;
+let i=0;
+while(i<s.length){
+    if(s[i]==c){
+            x++;
+        } 
+        i++;
+}
+return x;
+}
+console.log(repeatChar_loop("haneen",'e'));
+console.log(repeatChar_while("haneen mahmoud mohammad sobeeh",'m'));
+
+//20
+function evenIndexOddLength_loop(arr) {
+    let array = [];
+            for (let i = 0; i < arr.length; i += 2) {
+              if (arr[i].length % 2 != 0) {
+                array.push(arr[i]);
+              }
+            }
+            return array;   
+}
+
+function evenIndexOddLength_while(arr) {
+    let array = [];
+    let i = 0;
+
+    while (i < arr.length) {
+        if (arr[i].length % 2 !== 0) {
+            array.push(arr[i]);
+        }
+        i += 2; 
+    }
+
+    return array;
+}
+
+console.log(evenIndexOddLength_loop(["banana","apple","shawerma","mansaf","sweet"]))
+console.log(evenIndexOddLength_while(["banana","apple","shawerma","mansaf","sweet"]))
+
+//21
+function powerElementIndex_loop(arr){
+    let array = []; 
+    for (let i = 0; i < arr.length; i ++) {
+       array.push(Math.pow(arr[i],i));
+    }
+return array;
+}
+
+function powerElementIndex_while(arr) {
+    let array = [];
+    let i = 0;
+
+    while (i < arr.length) {
+        array.push(Math.pow(arr[i], i));
+        i++;
+    }
+
+    return array;
+}
+
+console.log(powerElementIndex_loop([32,1,4,77,3,4]));
+console.log(powerElementIndex_while([2, 3, 4, 5]));
+
+
+//22
+
+
+
+    </script>
+</body>
+</html>

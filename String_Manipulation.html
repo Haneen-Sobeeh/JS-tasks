@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        let str1="haneen";
+        let str2="sobeeh";
+        console.log(str1.concat(" ",str2));
+       
+
+        //2
+        let str3="haneen sobeeh from jordan";
+        console.log(str3.length);
+
+
+        //3
+        let str4="Programming";
+        console.log(str4.charAt(0));
+        
+
+        //4
+
+        let str="coding is fun";
+        console.log(str.substring(0,6))
+
+        //5
+        let str5="cat";
+        console.log(str5.replace("a","e"));
+
+        //6
+        let str6="JAVASCRIPT";
+        console.log(str6.toUpperCase());
+
+        //7
+        let str7="apple,banana,orange";
+        console.log(str7.split(" "));
+
+        //8
+       let array= ["hello", "world"] ;
+        console.log(array.join(" "));
+
+        //9
+        let str9=" hello world ";
+        console.log(str9.trim());
+
+        //10
+        console.log(str9.includes("world"));
+
+        //11
+       
+        function reversed(str){
+            return str9.split('').reverse().join('');
+        }
+       
+        console.log(reversed("haneeen"));
+
+        //12
+        function count(s,c){
+           let count=0;
+           for(let i=0;i<s.length;i++){
+           if(s[i]==c){
+            count++;
+           }
+        }
+        return count;
+    }
+    console.log(count(str9,"w"));
+
+
+        //13
+
+        let str13="racecar"
+        function isPalindrome(str) {
+    let j = str.length - 1
+    for (let i = 0; i < str.length / 2; i++) {
+        if (str[i] != str[j]) {
+            return false;
+        }
+        j--;
+    }
+    return true;
+    }
+    console.log(isPalindrome(str13));
+
+
+
+
+    //14
+    function Convert(str) {
+
+  let words = str.split(' ');
+
+  let result = "";
+
+  for (let word of words) {
+    result += word.charAt(0).toUpperCase() + word.slice(1) + " ";
+  }
+
+  return result.trim();
+}
+
+console.log(Convert("hello world"));
+// Output: "Hello World"
+
+
+
+    //15
+    let num=1234.5678;
+    console.log(num.toFixed(2))
+
+    //16
+    function Extracting (str){
+        let array=[];
+        for(let i=0;i<str.length;i++){
+            if (str[i] == '1' || str[i] == '2' || str[i] == '3' || str[i] == '4' || str[i] == '5' || 
+            str[i] == '6' || str[i] == '7' || str[i] == '8' || str[i] == '9' || str[i] == '0') {
+            array.push(Number(str[i]));
+        }
+        }
+        return array;
+    }
+     let s="There are 3 apples and 2 oranges";
+    console.log(Extracting(s));
+
+
+    //17
+
+    function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+console.log(validateEmail("example@email.com"))
+console.log(validateEmail("haneen sobeeh"))
+
+    //18
+    let st18="This is a bad word";
+    console.log(st18.replace("bad","good"))
+
+
+    //19
+    function removeDup(str){
+        let word="";
+        for(let i=0;i<str.length;i++){
+            if(str[i]!==str[i+1]){
+               word +=str[i];
+            }
+        }
+        return word;
+    }
+    console.log(removeDup("aaabbbccdaaa"));
+
+
+    //20
+    /*const str = "hello world";  
+let sortedStr = "";  
+for (let i = 0; i < str.length; i++) {  
+for (let j = i + 1; j < str.length; j++) {  
+if (str[j] < str[i]) {  
+const temp = str[i];      
+str[i] = str[j];  
+str[j] = temp;  
+}  
+}  
+sortedStr += str[i];  
+}  
+console.log(sortedStr);  */
+    function sortCharacters(str) {
+    return str.split("").sort().join("");
+}
+    console.log(sortCharacters("hello")); 
+
+    //21
+    function areAnagrams(str1, str2) {
+    let sortedStr1 = str1.split("").sort().join("").toLowerCase();
+    let sortedStr2 = str2.split("").sort().join("").toLowerCase();
+    return sortedStr1 === sortedStr2;
+}
+console.log(areAnagrams("listen", "silent")); 
+
+//22
+
+function reverseWords(sentence) {
+    return sentence.split(" ").reverse().join(" ");  
+}
+console.log(reverseWords("The quick brown fox")); 
+
+//23
+function findLong(str){
+    let word=str.split(' ');
+    let long="";
+
+    for (let a of word){
+        if(a.length>long.length){
+            long=a;
+        }
+    }
+    return long;
+}
+
+console.log(findLong("Web development is fascinating"))
+
+//24
+function isPalindrome(str) {
+  const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  
+  return cleanedStr === cleanedStr.split('').reverse().join('');
+}
+
+
+console.log(isPalindrome("A man, a plan, a canal, Panama")); 
+
+
+
+//25
+function charCount(str) {
+  const result = {}; 
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    
+    if (result[char]) {
+      result[char]++;
+    } 
+
+    else {
+      result[char] = 1;
+    }
+  }
+  
+  return result; 
+}
+
+
+console.log(charCount("mississippi"));
+
+//26
+function replaceVowels(str) {
+    let vowelMap = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+    
+    return str.replace(/[aeiou]/gi, function(match) {
+        return vowelMap[match.toLowerCase()];
+    });
+}
+console.log(replaceVowels("Hello World"));
+    </script>
+</body>
+</html>
