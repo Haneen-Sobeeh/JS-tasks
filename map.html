@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let array=[2, 5, 100];
+    //1
+    function doubleNumbers(num){
+        return num * 2;
+    }
+
+    let newarr1=array.map(doubleNumbers)
+    console.log(newarr1);
+
+
+    //2
+    function stringItUp(num){
+        return String(num);
+        }
+
+    let newarr2=array.map(stringItUp);
+    console.log(newarr2);
+
+
+
+    //3
+       let name=["john", "JACOB", "jinGleHeimer", "schmidt"];
+       function capitalizeNames(name){
+        return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+      
+       }
+       let newarr3=name.map(capitalizeNames);
+       console.log(newarr3);
+    
+
+       //4
+       const users = [
+  { name: 'Haneen', age: 22 },
+  { name: 'Ahmad', age: 40 },
+  { name: 'Leen', age: 18 }
+];
+
+function namesOnly(arr){
+    return arr.name;
+}
+       let newarr4=users.map(namesOnly);
+       console.log(newarr4)
+
+
+       //5
+function makeStrings(user){
+    if(user.age>18){
+        return user.name+" can go to The Matrix";
+    }
+    else{
+        return user.name+" is under age!";
+    }
+   } 
+
+let newarr5=users.map(makeStrings);
+console.log(newarr5)
+
+   //6
+   function readyToPutInTheDOM(user){
+  
+    return `<h1> ${user.name}</h1>  <h2> ${user.age}</h2>`
+
+     } 
+
+    let newarr6=users.map(readyToPutInTheDOM);
+    console.log(newarr6)
+
+    //7
+    function doubleValues(num){
+        return num * 2;
+    }
+
+    let newarr7=array.map(doubleValues)
+    console.log(newarr7);
+
+    //8
+    let array8=[2, 5, 100,7];
+   function valTimesIndex(arr,index){
+    return arr*index;
+   }
+
+   let newarr8=array8.map(valTimesIndex)
+   console.log(newarr8);
+
+   //9
+   let array9 = [{ name: 'Elie' }, { name: 'Tim' }, { name: 'Matt' }, { name: 'Colt' }];
+
+function extractKey(arr, key) {
+    return arr.map(obj => obj[key]);
+}
+
+let newarr9 = extractKey(array9, 'name');
+console.log(newarr9);  
+
+   //10
+   let array10=[{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia"}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele"}];
+   function extractFullName(arr){
+    return `${arr.first} ${arr.last}`
+
+   }
+   let newarr10=array10.map(extractFullName)
+   console.log(newarr10);
+   </script> 
+</body>
+</html>

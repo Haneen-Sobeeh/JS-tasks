@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //1
+    let array=[65, 44, 12, 4, 7];
+
+    function doubleValues(num) {
+        let newarr=[];
+    array.forEach(
+        function(num) {
+            newarr.push(num*2);
+        }
+    );
+        return newarr;
+       }
+       console.log(doubleValues(array))
+
+
+       //2
+       function onlyEvenValues(arr) {
+        let newarr=[];
+    array.forEach(
+        function(num) {
+           if(num%2===0){
+            newarr.push(num);
+           }
+        }
+    );
+        return newarr;
+       }
+       console.log(onlyEvenValues(array))
+
+
+       //3
+       let array3=["haneen","ahmad","cat","sweet"]
+       function showFirstAndLast(arr) {
+    let newarr = [];
+    arr.forEach(function(str) {
+        if (str.length > 0) {
+            newarr.push(str.charAt(0) + str.charAt(str.length - 1));
+        }
+    });
+    return newarr;
+}
+console.log(showFirstAndLast(array3))
+
+
+       //4
+       let array4 = [{ name: 'Elie' }, { name: 'Tim' }, { name: 'Matt' }, { name: 'Colt' }];
+
+       function addKeyAndValue(arr, key, value) {
+    arr.forEach(function(obj) {
+        obj[key] = value;
+    });
+    return arr;
+}
+console.log(addKeyAndValue(array4, 'title', 'instructor'));
+
+
+       //5
+       function vowelCount(str) {
+    let vowels = 'aeiou';
+    let result = {};
+    let lowerStr = str.toLowerCase();
+
+    lowerStr.split('').forEach(function(char) {
+        if (vowels.includes(char)) {
+            result[char] = (result[char] || 0) + 1;
+        }
+    });
+    
+    return result;
+}
+
+// Test Cases
+console.log(vowelCount('Elie')); // {e: 2, i: 1}
+console.log(vowelCount('Tim')); // {i: 1}
+console.log(vowelCount('Matt')); // {a: 1}
+console.log(vowelCount('hmmm')); // {}
+console.log(vowelCount('I Am awesome and so are you'));
+
+   </script> 
+</body>
+</html>
