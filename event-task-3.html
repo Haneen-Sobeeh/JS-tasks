@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p>Password (min 6 characters):</p>
+    <input type="password" id="pass1" oninput="validatePasswords()">
+    <div id="pass1Error" class="error"></div>
+
+    <p>Repeat password:</p>
+    <input type="password" id="pass2" oninput="validatePasswords()">
+    <div id="pass2Error" class="error"></div>
+
+    <button>Submit</button>
+
+    <script>
+        function validatePasswords() {
+            const pass1 = document.getElementById("pass1");
+            const pass2 = document.getElementById("pass2");
+            const pass1Error = document.getElementById("pass1Error");
+            const pass2Error = document.getElementById("pass2Error");
+
+           
+            pass1Error.textContent = '';
+            pass2Error.textContent = '';
+
+            
+            if (pass1.value.length < 6) {
+                pass1Error.textContent = 'Password must be at least 6 characters long.';
+            }
+
+           
+            if (pass1.value !== pass2.value) {
+                pass2Error.textContent = 'Passwords do not match.';
+            }
+        }
+    </script>
+</body>
+</html>

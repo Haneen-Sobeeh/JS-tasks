@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich Text Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .toolbar {
+            margin-bottom: 10px;
+        }
+
+        .editor {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 200px;
+            width: 100%;
+            background: #fff;
+        }
+
+        button {
+            margin-right: 5px;
+        }
+
+        select {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <button onclick="format('bold')">Bold</button>
+        <button onclick="format('underline')">Underline</button>
+        <select onchange="changeFontFamily(this.value)">
+            <option value="">Font Family</option>
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+        </select>
+        <select onchange="changeFontSize(this.value)">
+            <option value="">Font Size</option>
+            <option value="1">Small</option>
+            <option value="3">Normal</option>
+            <option value="5">Large</option>
+            <option value="7">Huge</option>
+        </select>
+    </div>
+    <div id="editor" contenteditable="true" class="editor">
+        Start typing here...
+    </div>
+    <script>
+        function format(command) {
+            document.execCommand(command, false, null);
+        }
+
+        function changeFontFamily(font) {
+            if (font) {
+                document.execCommand('fontName', false, font);
+            }
+        }
+
+        function changeFontSize(size) {
+            if (size) {
+                document.execCommand('fontSize', false, size);
+            }
+        }
+    </script>
+</body>
+</html>

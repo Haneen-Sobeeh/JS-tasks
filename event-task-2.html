@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <select name="flag" id="flag" onchange="handleClick()">
+        <option value=""></option>   
+        <option value="jordan(7).png">Jordan</option>
+        <option value="s.png">Saudi Arabia</option>
+        <option value="download (1).png">Syria</option>
+        <option value="download.png">Lebanon</option>
+        <option value="pl.png">Palestine</option>
+    </select>
+    <br><br>
+    <img id="flagImage" src="" alt="flag" >
+    
+    <script>
+        function handleClick() {
+            const selectElement = document.getElementById('flag');
+            const selectedValue = selectElement.value;
+            
+           
+            const flagImage = document.getElementById('flagImage');
+            
+            
+            flagImage.src = selectedValue;
+        }
+    </script>
+</body>
+</html>
